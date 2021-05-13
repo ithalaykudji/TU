@@ -8,11 +8,14 @@
         <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="./">Home</a></li>
             <?php if(isset($_SESSION['id-user'])){?>
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="./">Users</a></li>
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="./">Mahasiswa</a></li>
-            <?php }?>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="user">Users</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="mhs-baru">Mahasiswa Baru</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="mhs-wisuda">Mahasiswa Wisuda</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="Application/controller/logout">Logout</a></li>
+            <?php }if(!isset($_SESSION['id-user'])){?>
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="?auth=1/">Login</a></li>
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="?auth=2/">Registrasi</a></li>
+            <?php }?>
         </ul>
     </div>
 </nav>
