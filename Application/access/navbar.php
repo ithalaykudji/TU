@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top" id="sideNav">
     <a class="navbar-brand js-scroll-trigger" href="./">
-        <span class="d-block d-lg-none">Clarence Taylor</span>
+        <span class="d-block d-lg-none">TU Teknik UNWIRA</span>
         <span class="d-none d-lg-block"><img class="img-fluid img-profile mx-auto mb-2" src="Assets/img/logo-unwira.png" alt="..." /></span>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
