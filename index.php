@@ -26,8 +26,21 @@
                     <section class="resume-section" id="about">
                         <div class="resume-section-content">
                             <h2 class="mb-0">Login</h2>
-                            <?php if(isset($_SESSION["message-success"])){?><div class="alert alert-success" role="alert"><?= $_SESSION['message-success']?></div><?php }?>
-                            <?php if(isset($_SESSION["message-danger"])){?><div class="alert alert-danger" role="alert"><?= $_SESSION['message-danger']?></div><?php }?>
+                            <?php if(isset($_SESSION["message-success"])){?>
+                                <div class="alert alert-success alert-dismissible fade show small" role="alert">
+                                    <?= $_SESSION['message-success']?>
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            <?php }if(isset($_SESSION["message-danger"])){?>
+                                <div class="alert alert-danger alert-dismissible fade show small" role="alert">
+                                    <?= $_SESSION['message-danger']?>
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            <?php }?>
                             <form method="POST" class="mt-5">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">NIP</label>
@@ -47,7 +60,14 @@
                     <section class="resume-section" id="about">
                         <div class="resume-section-content">
                             <h2 class="mb-0">Registration</h2>
-                            <?php if(isset($_SESSION["message-danger"])){?><div class="alert alert-danger" role="alert"><?= $_SESSION['message-danger']?></div><?php }?>
+                            <?php if(isset($_SESSION["message-danger"])){?>
+                                <div class="alert alert-danger alert-dismissible fade show small" role="alert">
+                                    <?= $_SESSION['message-danger']?>
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            <?php }?>
                             <form method="POST" class="mt-5">
                                 <div class="form-group">
                                     <label for="exampleInputnip1">NIP</label>

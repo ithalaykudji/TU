@@ -7,10 +7,14 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="./">Home</a></li>
-            <?php if(isset($_SESSION['id-user'])){?>
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="user">Users</a></li>
+            <?php if(isset($_SESSION['id-user'])){if($_SESSION['id-role']==1){?>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="users">Users</a></li>
+            <?php }if($_SESSION['id-role']<=2){?>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="pegawai">Pegawai</a></li>
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="mhs-baru">Mahasiswa Baru</a></li>
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="mhs-wisuda">Mahasiswa Wisuda</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="data-wisuda">Data Wisuda</a></li>
+            <?php }?>
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="Application/controller/logout">Logout</a></li>
             <?php }if(!isset($_SESSION['id-user'])){?>
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="?auth=1/">Login</a></li>
