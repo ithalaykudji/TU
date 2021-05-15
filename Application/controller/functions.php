@@ -161,7 +161,9 @@ if(!isset($_SESSION["id-user"])){
     }
     function mahasiswa_wisuda_hapus($data){global $conn;
         $id_mhs=htmlspecialchars(addslashes(trim(mysqli_real_escape_string($conn, $data['id-mhs']))));
+        $noreg=htmlspecialchars(addslashes(trim(mysqli_real_escape_string($conn, $data['noreg']))));
         mysqli_query($conn, "DELETE FROM mahasiswa_wisuda WHERE id_mhs='$id_mhs'");
+        mysqli_query($conn, "DELETE FROM data_wisuda WHERE noreg='$noreg'");
         return mysqli_affected_rows($conn);
     }
     // function __($data){global $conn;}

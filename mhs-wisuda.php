@@ -244,6 +244,7 @@
                                         </td>
                                         <td><form action="" method="POST">
                                             <input type="hidden" name="id-mhs" value="<?= $row['id_mhs']?>">
+                                            <input type="hidden" name="noreg" value="<?= $row['noreg']?>">
                                             <button type="submit" name="hapus-mhsWisuda" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Hapus</button>
                                         </form></td>
                                     </tr>
