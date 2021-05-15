@@ -63,4 +63,13 @@
                 header("Location: mhs-wisuda"); exit;
             }
         }
+        $viewProdiSipil=mysqli_query($conn, "SELECT * FROM mahasiswa_wisuda WHERE id_prodi='11'");
+        $countProdiSipil=mysqli_num_rows($viewProdiSipil);
+        $viewProdiArsitek=mysqli_query($conn, "SELECT * FROM mahasiswa_wisuda WHERE id_prodi='12'");
+        $countProdiArsitek=mysqli_num_rows($viewProdiArsitek);
+        $viewProdiIlkom=mysqli_query($conn, "SELECT * FROM mahasiswa_wisuda WHERE id_prodi='13'");
+        $countProdiIlkom=mysqli_num_rows($viewProdiIlkom);
+        $wisudaMahasiswaSipil=mysqli_query($conn, "SELECT * FROM data_wisuda JOIN mahasiswa_wisuda ON data_wisuda.noreg=mahasiswa_wisuda.noreg JOIN prodi ON data_wisuda.id_prodi=prodi.id_prodi WHERE data_wisuda.id_prodi='11'");
+        $wisudaMahasiswaArsitek=mysqli_query($conn, "SELECT * FROM data_wisuda JOIN mahasiswa_wisuda ON data_wisuda.noreg=mahasiswa_wisuda.noreg JOIN prodi ON data_wisuda.id_prodi=prodi.id_prodi WHERE data_wisuda.id_prodi='12'");
+        $wisudaMahasiswaIlkom=mysqli_query($conn, "SELECT * FROM data_wisuda JOIN mahasiswa_wisuda ON data_wisuda.noreg=mahasiswa_wisuda.noreg JOIN prodi ON data_wisuda.id_prodi=prodi.id_prodi WHERE data_wisuda.id_prodi='13'");
     }

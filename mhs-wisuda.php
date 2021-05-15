@@ -85,6 +85,10 @@
                                                         <label>Lama Studi</label>
                                                         <input type="number" name="lama-studi" class="form-control" placeholder="Lama Studi" required>
                                                     </div>
+                                                    <div class="form-group">
+                                                        <label>Jenjang</label>
+                                                        <input type="number" name="jenjang" class="form-control" placeholder="Jenjang" required>
+                                                    </div>
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-dark btn-sm shadow" data-dismiss="modal">Keluar</button>
@@ -166,6 +170,7 @@
                                                         </div>
                                                         <form action="" method="POST">
                                                             <input type="hidden" name="id-mhs" value="<?= $row['id_mhs']?>">
+                                                            <input type="hidden" name="old-noreg" value="<?= $row['noreg']?>">
                                                             <div class="modal-body text-center">
                                                                 <div class="form-group">
                                                                     <label>Program Studi</label>
@@ -222,6 +227,10 @@
                                                                 <div class="form-group">
                                                                     <label>Lama Studi</label>
                                                                     <input type="number" name="lama-studi" value="<?= $row['lama_studi']?>" class="form-control" placeholder="Lama Studi" required>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label>Jenjang</label>
+                                                                    <input type="number" name="jenjang" class="form-control" placeholder="Jenjang" required>
                                                                 </div>
                                                             </div>
                                                             <div class="modal-footer">
