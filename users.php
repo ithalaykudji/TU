@@ -8,7 +8,9 @@
     <head><?php require_once("Application/access/header.php")?></head>
     <body>
         <?php require_once("Application/access/navbar.php")?>
-        
+        <div class="container">
+            <div class="row"></div>
+        </div>
         <?php require_once("Application/access/footer.php")?>
     </body>
 </html>

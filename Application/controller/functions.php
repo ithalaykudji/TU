@@ -119,8 +119,7 @@ if(!isset($_SESSION["id-user"])){
         $tahun_wisuda=htmlspecialchars(addslashes(trim(mysqli_real_escape_string($conn, $data['tahun-wisuda']))));
         $wisuda_ke=htmlspecialchars(addslashes(trim(mysqli_real_escape_string($conn, $data['wisuda-ke']))));
         $lama_studi=htmlspecialchars(addslashes(trim(mysqli_real_escape_string($conn, $data['lama-studi']))));
-        $jenjang=htmlspecialchars(addslashes(trim(mysqli_real_escape_string($conn, $data['jenjang']))));
-        mysqli_query($conn, "INSERT INTO data_wisuda(id_prodi,noreg,jenjang) VALUES('$id_prodi','$noreg','$jenjang')");
+        mysqli_query($conn, "INSERT INTO data_wisuda(id_prodi,noreg) VALUES('$id_prodi','$noreg')");
         mysqli_query($conn, "INSERT INTO mahasiswa_wisuda(id_prodi,noreg,nama,jk,ttl,tgl_masuk,tgl_lulus,ipk,predikat_lulus,tahun_wisuda,wisuda_ke,lama_studi) VALUES('$id_prodi','$noreg','$nama','$jk','$ttl','$tgl_masuk','$tgl_lulus','$ipk','$predikat_lulus','$tahun_wisuda','$wisuda_ke','$lama_studi')");
         return mysqli_affected_rows($conn);
     }
@@ -154,8 +153,7 @@ if(!isset($_SESSION["id-user"])){
         $tahun_wisuda=htmlspecialchars(addslashes(trim(mysqli_real_escape_string($conn, $data['tahun-wisuda']))));
         $wisuda_ke=htmlspecialchars(addslashes(trim(mysqli_real_escape_string($conn, $data['wisuda-ke']))));
         $lama_studi=htmlspecialchars(addslashes(trim(mysqli_real_escape_string($conn, $data['lama-studi']))));
-        $jenjang=htmlspecialchars(addslashes(trim(mysqli_real_escape_string($conn, $data['jenjang']))));
-        mysqli_query($conn, "UPDATE data_wisuda SET id_prodi='$id_prodi', noreg='$noreg', jenjang='$jenjang' WHERE noreg='$old_noreg'");
+        mysqli_query($conn, "UPDATE data_wisuda SET id_prodi='$id_prodi', noreg='$noreg' WHERE noreg='$old_noreg'");
         mysqli_query($conn, "UPDATE mahasiswa_wisuda SET id_prodi='$id_prodi', noreg='$noreg', nama='$nama', jk='$jk', ttl='$ttl', tgl_masuk='$tgl_masuk', tgl_lulus='$tgl_lulus', ipk='$ipk', predikat_lulus='$predikat_lulus', tahun_wisuda='$tahun_wisuda', wisuda_ke='$wisuda_ke', lama_studi='$lama_studi' WHERE id_mhs='$id_mhs'");
         return mysqli_affected_rows($conn);
     }

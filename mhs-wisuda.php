@@ -85,10 +85,6 @@
                                                         <label>Lama Studi</label>
                                                         <input type="number" name="lama-studi" class="form-control" placeholder="Lama Studi" required>
                                                     </div>
-                                                    <div class="form-group">
-                                                        <label>Jenjang</label>
-                                                        <input type="number" name="jenjang" class="form-control" placeholder="Jenjang" required>
-                                                    </div>
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-dark btn-sm shadow" data-dismiss="modal">Keluar</button>
@@ -227,10 +223,6 @@
                                                                 <div class="form-group">
                                                                     <label>Lama Studi</label>
                                                                     <input type="number" name="lama-studi" value="<?= $row['lama_studi']?>" class="form-control" placeholder="Lama Studi" required>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label>Jenjang</label>
-                                                                    <input type="number" name="jenjang" class="form-control" placeholder="Jenjang" required>
                                                                 </div>
                                                             </div>
                                                             <div class="modal-footer">
